@@ -1,0 +1,56 @@
+/* ListGroupItem of bootstrap */
+.list-product {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    /* color: #212529; */
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom: 0;
+}
+.list-product + .list-product {
+    border-bottom: 0;
+}
+.cart__item {
+    padding: 27px 16px;
+}
+
+.cart__product-info {
+    margin-left: 16px;
+}
+.cart__item-info img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+}
+
+.cart__product-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.cart__product-price {
+    font-size: 0.8rem;
+}
+.cart__product-price span {
+    font-size: 0.9rem;
+    font-size: 600;
+    color: var(--primary-color);
+}
+.increase__decrease-btn {
+    background-color: #fde4e4;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.increase__btn,
+.decrease__btn {
+    cursor: pointer;
+}
+.delete__btn {
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-size-adjust: 600;
+}
+.delete__btn:hover {
+    opacity: 0.9;
+}

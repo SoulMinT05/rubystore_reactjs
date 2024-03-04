@@ -1,0 +1,25 @@
+.table-info {
+    text-align: center;
+}
+.cart__img-box {
+    width: 144px;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}
+.cart__item-info,
+.cart__item-price,
+.cart__item-del {
+    text-align: center;
+    padding: 59px 0 !important;
+}
+.cart__item-price {
+    min-width: 160px;
+}
+.cart__item-del {
+    i {
+        cursor: pointer;
+    }
+}

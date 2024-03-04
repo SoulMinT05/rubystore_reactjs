@@ -1,0 +1,170 @@
+.model__img img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.feature__subtitle {
+    color: var(--primary-color);
+}
+.feature__title span {
+    color: var(--primary-color);
+}
+.feature__text {
+    color: #777;
+}
+.feature__item img {
+    height: 80px;
+}
+.feature__item p {
+    color: #777;
+}
+.outfit__category {
+    background-color: var(--primary-color);
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0px;
+    border-radius: 8px;
+}
+
+.outfit__category button {
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    background-color: transparent;
+    color: #fff;
+}
+.outfit__category button img {
+    width: 20px;
+    height: 20px;
+}
+
+.outfitBtnActive {
+    background-color: #fff !important;
+    color: var(--primary-color) !important;
+    border-radius: 5px;
+}
+.outfit__category-hover:hover {
+    color: var(--primary-color);
+    background-color: #fff;
+    border-radius: 5px;
+}
+.gorgeous__outfit-title span {
+    color: var(--primary-color);
+}
+.gorgeous__outfit-desc {
+    color: #777;
+    line-height: 28px;
+}
+.choose__us-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.choose__us-title i {
+    font-weight: 500 !important;
+    color: var(--primary-color);
+}
+.choose__us-desc {
+    color: #777;
+}
+.testimonial__subtitle {
+    color: var(--primary-color);
+}
+.testimonial__desc {
+    font-size: 1.8rem;
+}
+.testimonial__desc span {
+    color: var(--primary-color);
+}
+.testimonial__img {
+    margin-top: 212px;
+}
+
+@media only screen and (min-width: 1400px) {
+    .testimonial__img {
+        margin-top: 100px;
+    }
+}
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+    .feature__item img {
+        height: 60px;
+        object-fit: cover;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .model__content h5 {
+        font-size: 1rem;
+    }
+    .model__content p {
+        font-size: 0.8rem;
+        line-height: 25px;
+    }
+    .model__title {
+        font-size: 1.5rem;
+        line-height: 40px;
+    }
+    .model__btns button {
+        padding: 5px 15px;
+        font-size: 0.7rem;
+    }
+    .model__service p {
+        font-size: 0.7rem;
+    }
+    .feature__item h5 {
+        font-size: 0.9rem;
+    }
+    .feature__item p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+    .feature__subtitle {
+        font-size: 1rem;
+    }
+    .feature__text {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+    .outfit__category {
+        padding: 15px;
+    }
+    .outfit__category button {
+        padding: 5px 16px;
+        font-size: 1rem;
+    }
+
+    .gorgeous__outfit-desc {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+    .why__choose-us {
+        padding-top: 0;
+    }
+    .choose__us-title {
+        font-size: 0.8rem;
+    }
+    .choose__us-desc {
+        font-size: 0.7rem;
+    }
+
+    .testimonial__subtitle {
+        font-size: 1.5rem;
+    }
+    .testimonial__desc {
+        font-size: 1.7rem;
+    }
+    .testimonial__img {
+        margin-top: 176px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .model__content {
+        text-align: center;
+    }
+
+    .model__btns {
+        justify-content: center;
+    }
+
+    .model__service {
+        justify-content: center;
+    }
+}

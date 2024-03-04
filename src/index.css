@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+/* reset default style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* base style */
+
+body {
+    background: #fcfcfc;
+    font-family: 'Istok Web', sans-serif;
+}
+
+:root {
+    --primary-color: #ee4b2b;
+    --text-color: #212245;
+
+    /* Admin panel */
+    --card-bg-01: #fdefe6;
+    --card-bg-02: #d6e5fb;
+    --card-bg-03: #ceebe9;
+    --card-bg-04: #e2f2b2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'RocknRoll One', sans-serif !important;
+}
+
+a:hover {
+    color: unset;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #212245;
+}
+
+section {
+    padding: 60px 0px;
+}
+
+.tab__active {
+    color: var(--primary-color);
+}
+
+/* Admin panel */
+.active__admin-menu {
+    background-color: whitesmoke;
+}
+
+.ui.dimmer {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+@media only screen and (max-width: 768px) {
+    section {
+        padding: 40px 0px;
+    }
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+}

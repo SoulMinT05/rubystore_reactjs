@@ -1,0 +1,762 @@
+.img__item {
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.single__product-content {
+    padding-left: 50px;
+}
+.product__title {
+    font-size: 24px;
+}
+.product__price {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    columns: 1rem;
+    margin-bottom: 0;
+}
+.product__priceSale {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.product__priceOriginal {
+    margin-left: 16px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #d58f8f;
+    text-decoration: line-through;
+}
+.category {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    font-weight: 500;
+    color: var(--text-color);
+    column-gap: 1rem;
+    font-size: 1.2rem;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+    margin-top: 24px;
+}
+.category span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.buy__products-btns {
+    display: flex;
+    align-items: center;
+    outline: var(--text-color);
+    opacity: 0.7;
+}
+.increase__btn,
+.decrease__btn {
+    height: 56px;
+    border-radius: 0.375rem;
+    width: 56px;
+    border: 0;
+}
+.quantity {
+    margin: 0 12px;
+    width: 96px;
+    border-radius: 0.375rem;
+    height: 56px;
+    cursor: default !important;
+    border: 0;
+}
+.addToCart__details {
+    height: 56px;
+    border: none;
+    padding: 7px 26px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 12px;
+}
+.addToCart__details:hover {
+    opacity: 0.9;
+}
+.addToCart__btn {
+    margin-left: 30px;
+}
+
+.social__links-details {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    gap: 1rem;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+.social__links-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.social__links-media {
+    width: 72px;
+
+    a {
+        margin: 8px 0 0 -2px !important;
+        display: block;
+    }
+}
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 12px 0;
+    margin-bottom: 4px;
+    // border-bottom: 1px solid #fde4e4;
+    // d-flex align-items-center gap-3 py-2
+}
+.tabs h6 {
+    cursor: pointer;
+}
+.tab__content {
+    padding: 8px 0;
+}
+.tab__content p {
+    margin: -12px 0 24px 0;
+    line-height: 28px;
+    color: var(--text-color);
+}
+.tab__active {
+    color: var(--primary-color);
+}
+.form {
+    width: 60%;
+    margin: auto;
+    background-color: #fde4e4;
+    padding: 20px;
+    border-radius: 5px;
+}
+.form__group {
+    margin-bottom: 30px;
+}
+.form__group input,
+.form__group textarea {
+    width: 100%;
+    background: transparent;
+    padding: 7px 20px;
+    border: none;
+    border-bottom: 1px solid #2122454c;
+}
+.form__group input:focus,
+.form__group textarea:focus {
+    outline: none;
+}
+.tab__form {
+    margin-bottom: 16px;
+}
+.user__name {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+.user__email {
+    font-size: 0.8rem;
+}
+.feedback__text {
+    color: #212245b6;
+}
+.related__product-title {
+    font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .product__title {
+        font-size: 20px;
+    }
+    .product__priceSale {
+        font-size: 28px;
+    }
+    .product__priceOriginal {
+        font-size: 20px;
+    }
+    .category,
+    .category span {
+        font-size: 1.1rem;
+    }
+    .addToCart__details {
+        height: 48px;
+    }
+    .social__links-media {
+        width: 48px !important;
+
+        a {
+            margin: 5px 0 0 -19px !important;
+        }
+    }
+    .tabs {
+        margin-top: 30px;
+    }
+    .tabs h6 {
+        font-size: 1rem;
+    }
+    .tab__content p,
+    .user__name,
+    .feedback__text {
+        font-size: 0.9rem;
+    }
+    .form {
+        width: 100% !important;
+        margin: 52px 0;
+    }
+    .form__group input::placeholder,
+    .form__group textarea::placeholder {
+        font-size: 0.9rem;
+    }
+    .related__product-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .product__images {
+        display: flex;
+        flex-direction: row;
+    }
+    .product__images .img__item {
+        display: flex;
+        justify-content: center;
+    }
+    .product__main-img {
+        margin-bottom: 24px;
+    }
+}
+
+//1
+// import React, { useEffect, useState } from 'react';
+
+// import logo from '../../assets/images/checkout.png';
+// import products from '../../assets/fake-data/products';
+// import ProductCard from '../../components/UI/ProductCard/ProductCard';
+// import CartItem from '../../components/UI/Cart/CartItem';
+
+// import Helmet from '../../components/Helmet/Helmet';
+// import CommonSection from '../../components/UI/CommonSection/CommonSection';
+// import { Container, Row, Col } from 'reactstrap';
+
+// import classNames from 'classnames/bind';
+// import styles from './OutfitDetails.module.scss';
+// import { useParams } from 'react-router-dom';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { cartActions } from '../../store/shoppingCart/cartSlice';
+
+// const cx = classNames.bind(styles);
+
+// const FoodDetails = () => {
+//     const [tab, setTab] = useState('desc');
+//     const [enteredName, setEnteredName] = useState('');
+//     const [enteredEmail, setEnteredEmail] = useState('');
+//     const [reviewMessaage, setReviewMessaage] = useState('');
+
+//     const { id } = useParams();
+//     const dispatch = useDispatch();
+
+//     const product = products.find((product) => product.id === id);
+//     const [previewImg, setPreviewImg] = useState(product.imgUrl);
+//     const { title, price, priceOriginal, category, desc, imgUrl, quantity } = product;
+//     const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
+//     const relatedProduct = products.filter((item) => item.category === category);
+
+//     const addItem = () => {
+//         dispatch(
+//             cartActions.addItem({
+//                 id,
+//                 title,
+//                 price,
+//                 imgUrl,
+//             }),
+//         );
+//     };
+
+//     const increaseItem = () => {
+//         dispatch(
+//             cartActions.addItem({
+//                 id,
+//                 title,
+//                 price,
+//                 imgUrl,
+//             }),
+//         );
+//     };
+
+//     const decreaseItem = () => {
+//         dispatch(cartActions.subtractItem(id));
+//     };
+
+//     useEffect(() => {
+//         setPreviewImg(product.imgUrl);
+//     }, [product]);
+
+//     useEffect(() => {
+//         window.scrollTo(0, 0);
+//     }, [product]);
+
+//     useEffect(() => {
+//         console.log('Quantity: ', quantity);
+//     });
+
+//     const submitHandler = (e) => {
+//         e.preventDefault();
+//     };
+
+//     return (
+//         <Helmet title="Product-details">
+//             <CommonSection title={title} />
+
+//             <section>
+//                 <Container>
+//                     <Row>
+//                         <Col lg="2" md="2">
+//                             <div className={cx('product__images')}>
+//                                 <div className={cx('img__item')} onClick={() => setPreviewImg(product.imgUrl)}>
+//                                     <img src={product.imgUrl} alt="" className="w-50" />
+//                                 </div>
+//                                 <div className={cx('img__item')} onClick={() => setPreviewImg(product.image02)}>
+//                                     <img src={product.image02} alt="" className="w-50" />
+//                                 </div>
+//                                 <div className={cx('img__item')} onClick={() => setPreviewImg(product.image03)}>
+//                                     <img src={product.image03} alt="" className="w-50" />
+//                                 </div>
+//                             </div>
+//                         </Col>
+//                         <Col lg="4" md="4">
+//                             <div className={cx('product__main-img')}>
+//                                 <img src={previewImg} alt="" className="w-100" />
+//                             </div>
+//                         </Col>
+//                         {/* <Col lg="6" md="6">
+//                             <div className="product__main-img">
+//                                 <img src={productImg} alt="" className="w-100" />
+//                             </div>
+//                             <div className="product__main-img">
+//                                 <img src={productImg} alt="" className="w-50" />
+//                             </div>
+//                             <div className="product__main-img">
+//                                 <img src={productImg} alt="" className="w-50" />
+//                             </div>
+//                             <div className="product__main-img">
+//                                 <img src={productImg} alt="" className="w-50" />
+//                             </div>
+//                         </Col> */}
+//                         <Col lg="6" md="6">
+//                             <div className={cx('single__product-content')}>
+//                                 <h2 className={cx('product__title')}>{title}</h2>
+//                                 <p className={cx('product__price')}>
+//                                     <span className={cx('product__priceSale')}>${price}</span>
+//                                     <span className={cx('product__priceOriginal')}>${priceOriginal}</span>
+//                                 </p>
+//                                 <p className={cx('category')}>
+//                                     <span className={cx('category__title')}>Category: </span>
+//                                     <span className={cx('category__model')}>{category}</span>
+//                                 </p>
+//                                 <div className="d-flex align-items-center justify-content-between ">
+//                                     {/* <div className={cx('buy__products-btns')}>
+//                                         <button className={cx('increase__btn')} onClick={increaseItem}>
+//                                             <i className="ri-add-line"></i>
+//                                         </button>
+//                                         <button className={cx('quantity')}>{totalQuantity}</button>
+//                                         <button className={cx('decrease__btn')} onClick={decreaseItem}>
+//                                             <i className="ri-subtract-line"></i>
+//                                         </button>
+//                                     </div> */}
+//                                     <button className={cx('addToCart__details')} onClick={addItem}>
+//                                         Add to Cart
+//                                     </button>
+//                                 </div>
+//                                 {/* <div className="d-flex align-items-center justify-content-between footer-copyright__follow"> */}
+//                                 <div className={cx('social__links-details')}>
+//                                     <h4 className={cx('social__links-title')}>Share: </h4>
+//                                     <div className={cx('social__links d-flex gap-3')}>
+//                                         <span className={cx('social__links-media')}>
+//                                             <a href="https://www.facebook.com/tamng.05/">
+//                                                 <i className="ri-facebook-fill"></i>
+//                                             </a>
+//                                         </span>
+//                                         <span className={cx('social__links-media')}>
+//                                             <a href="https://github.com/SoulMinT05">
+//                                                 <i className="ri-github-fill"></i>
+//                                             </a>
+//                                         </span>
+//                                         <span className={cx('social__links-media')}>
+//                                             <a href="#">
+//                                                 <i className="ri-linkedin-fill"></i>
+//                                             </a>
+//                                         </span>
+//                                         <span className={cx('social__links-media')}>
+//                                             <a href="#">
+//                                                 <i className="ri-youtube-fill"></i>
+//                                             </a>
+//                                         </span>
+//                                     </div>
+//                                 </div>
+//                                 <div className="checkout">
+//                                     <h5>Guaranteed Safe Checkout: </h5>
+//                                     <img src={logo} alt="logo" />
+//                                 </div>
+//                                 {/* </div> */}
+//                             </div>
+//                         </Col>
+//                         <Col lg="12" className="mt-4">
+//                             <div className={cx('tabs')}>
+//                                 <h6
+//                                     // className={cx(` ${tab === 'desc' ? 'tab__active' : ''}`)}
+//                                     className={cx('tab__active')}
+//                                     // className={(nav) => cx('menu-item', { active: nav.isActive })}
+//                                     // className={` ${tab === 'desc' ? 'tab__active' : ''} `}
+//                                     onClick={() => setTab('desc')}
+//                                 >
+//                                     Description
+//                                 </h6>
+//                                 <h6
+//                                     className={cx(` ${tab === 'rev' ? 'tab__active' : ''}`)}
+//                                     onClick={() => setTab('rev')}
+//                                 >
+//                                     Review
+//                                 </h6>
+//                             </div>
+
+//                             {tab === 'desc' ? (
+//                                 <div className={cx('tab__content')}>
+//                                     <p>{desc}</p>
+//                                 </div>
+//                             ) : (
+//                                 <div className={cx(' tab__form')}>
+//                                     <div className={cx('review')}>
+//                                         <p className={cx('user__name')}>HIEUTHUHAI</p>
+//                                         <p className={cx('user__email')}>hieuthuhai222@gmail.com</p>
+//                                         <p className={cx('feedback__text')}>Great product</p>
+//                                     </div>
+//                                     <div className={cx('review')}>
+//                                         <p className={cx('user__name')}>HIEUTHUHAI</p>
+//                                         <p className={cx('user__email')}>hieuthuhai222@gmail.com</p>
+//                                         <p className={cx('feedback__text')}>Great product</p>
+//                                     </div>
+//                                     <div className={cx('review')}>
+//                                         <p className={cx('user__name')}>HIEUTHUHAI</p>
+//                                         <p className={cx('user__email')}>hieuthuhai222@gmail.com</p>
+//                                         <p className={cx('feedback__text')}>Great product</p>
+//                                     </div>
+
+//                                     <form className={cx('form')} onSubmit={submitHandler}>
+//                                         <div className={cx('form__group')}>
+//                                             <input
+//                                                 type="text"
+//                                                 placeholder="Enter your name"
+//                                                 required
+//                                                 onChange={(e) => setEnteredName(e.target.value)}
+//                                             />
+//                                         </div>
+//                                         <div className={cx('form__group')}>
+//                                             <input
+//                                                 type="text"
+//                                                 placeholder="Enter your email"
+//                                                 required
+//                                                 onChange={(e) => setEnteredEmail(e.target.value)}
+//                                             />
+//                                         </div>
+//                                         <div className={cx('form__group')}>
+//                                             <textarea
+//                                                 row={5}
+//                                                 type="text"
+//                                                 placeholder="Write your review"
+//                                                 required
+//                                                 onChange={(e) => setReviewMessaage(e.target.value)}
+//                                             />
+//                                         </div>
+//                                         <button type="submit" className="addToCart__btn">
+//                                             Submit
+//                                         </button>
+//                                     </form>
+//                                 </div>
+//                             )}
+//                         </Col>
+//                         <Col lg="12" className="mt-12">
+//                             <h3 className={cx('related__product-title')}>Related Products</h3>
+//                         </Col>
+//                         {relatedProduct.map((item) => (
+//                             <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
+//                                 <ProductCard item={item} />
+//                             </Col>
+//                         ))}
+//                     </Row>
+//                 </Container>
+//             </section>
+//         </Helmet>
+//     );
+// };
+
+// export default FoodDetails;
+
+//2
+
+// import React, { useEffect, useState } from 'react';
+
+// import logo from '../../assets/images/checkout.png';
+// import products from '../../assets/fake-data/products';
+// import ProductCard from '../../components/UI/ProductCard/ProductCard';
+
+// import Helmet from '../../components/Helmet/Helmet';
+// import CommonSection from '../../components/UI/CommonSection/CommonSection';
+// import { Container, Row, Col } from 'reactstrap';
+
+// import classNames from 'classnames/bind';
+// import styles from './OutfitDetails.module.scss';
+// import { useParams } from 'react-router-dom';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { cartActions } from '../../store/shoppingCart/cartSlice';
+
+// // const cx = classNames.bind(styles);
+
+// const FoodDetails = () => {
+//     const [tab, setTab] = useState('desc');
+//     const [enteredName, setEnteredName] = useState('');
+//     const [enteredEmail, setEnteredEmail] = useState('');
+//     const [reviewMessaage, setReviewMessaage] = useState('');
+
+//     const { id } = useParams();
+//     const dispatch = useDispatch();
+
+//     const product = products.find((product) => product.id === id);
+//     const [previewImg, setPreviewImg] = useState(product.imgUrl);
+//     const { title, price, priceOriginal, category, desc, imgUrl, quantity } = product;
+//     const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
+//     const relatedProduct = products.filter((item) => item.category === category);
+
+//     const addItem = () => {
+//         dispatch(
+//             cartActions.addItem({
+//                 id,
+//                 title,
+//                 price,
+//                 imgUrl,
+//             }),
+//         );
+//     };
+
+//     const increaseItem = () => {
+//         dispatch(
+//             cartActions.addItem({
+//                 id,
+//                 title,
+//                 price,
+//                 imgUrl,
+//             }),
+//         );
+//     };
+
+//     const decreaseItem = () => {
+//         dispatch(cartActions.subtractItem(id));
+//     };
+
+//     useEffect(() => {
+//         setPreviewImg(product.imgUrl);
+//     }, [product]);
+
+//     useEffect(() => {
+//         window.scrollTo(0, 0);
+//     }, [product]);
+
+//     useEffect(() => {
+//         console.log('Quantity: ', quantity);
+//     });
+
+//     const submitHandler = (e) => {
+//         e.preventDefault();
+//     };
+
+//     return (
+//         <Helmet title="Product-details">
+//             <CommonSection title={title} />
+
+//             <section>
+//                 <Container>
+//                     <Row>
+//                         <Col lg="2" md="2">
+//                             <div className='product__images'>
+//                                 <div className='img__item' onClick={() => setPreviewImg(product.imgUrl)}>
+//                                     <img src={product.imgUrl} alt="" className="w-50" />
+//                                 </div>
+//                                 <div className='img__item' onClick={() => setPreviewImg(product.image02)}>
+//                                     <img src={product.image02} alt="" className="w-50" />
+//                                 </div>
+//                                 <div className='img__item' onClick={() => setPreviewImg(product.image03)}>
+//                                     <img src={product.image03} alt="" className="w-50" />
+//                                 </div>
+//                             </div>
+//                         </Col>
+//                         <Col lg="4" md="4">
+//                             <div className='product__main-img'>
+//                                 <img src={previewImg} alt="" className="w-100" />
+//                             </div>
+//                         </Col>
+//                         {/* <Col lg="6" md="6">
+//                             <div className="product__main-img">
+//                                 <img src={productImg} alt="" className="w-100" />
+//                             </div>
+//                             <div className="product__main-img">
+//                                 <img src={productImg} alt="" className="w-50" />
+//                             </div>
+//                             <div className="product__main-img">
+//                                 <img src={productImg} alt="" className="w-50" />
+//                             </div>
+//                             <div className="product__main-img">
+//                                 <img src={productImg} alt="" className="w-50" />
+//                             </div>
+//                         </Col> */}
+//                         <Col lg="6" md="6">
+//                             <div className='single__product-content'>
+//                                 <h2 className='product__title'>{title}</h2>
+//                                 <p className='product__price'>
+//                                     <span className='product__priceSale'>${price}</span>
+//                                     <span className='product__priceOriginal'>${priceOriginal}</span>
+//                                 </p>
+//                                 <p className='category'>
+//                                     <span className='category__title'>Category: </span>
+//                                     <span className='category__model'>{category}</span>
+//                                 </p>
+//                                 <div className="d-flex align-items-center justify-content-between ">
+//                                     {/* <div className='buy__products-btns')}>
+//                                         <button className='increase__btn')} onClick={increaseItem}>
+//                                             <i className="ri-add-line"></i>
+//                                         </button>
+//                                         <button className='quantity')}>{totalQuantity}</button>
+//                                         <button className='decrease__btn')} onClick={decreaseItem}>
+//                                             <i className="ri-subtract-line"></i>
+//                                         </button>
+//                                     </div> */}
+//                                     <button className='addToCart__details' onClick={addItem}>
+//                                         Add to Cart
+//                                     </button>
+//                                 </div>
+//                                 {/* <div className="d-flex align-items-center justify-content-between footer-copyright__follow"> */}
+//                                 <div className='social__links-details'>
+//                                     <h5 className='social__links-title'>Share: </h5>
+//                                     <div className='social__links d-flex gap-3'>
+//                                         <span className='social__links-media'>
+//                                             <a href="https://www.facebook.com/tamng.05/">
+//                                                 <i className="ri-facebook-fill"></i>
+//                                             </a>
+//                                         </span>
+//                                         <span className='social__links-media'>
+//                                             <a href="https://github.com/SoulMinT05">
+//                                                 <i className="ri-github-fill"></i>
+//                                             </a>
+//                                         </span>
+//                                         <span className='social__links-media'>
+//                                             <a href="#">
+//                                                 <i className="ri-linkedin-fill"></i>
+//                                             </a>
+//                                         </span>
+//                                         <span className='social__links-media'>
+//                                             <a href="#">
+//                                                 <i className="ri-youtube-fill"></i>
+//                                             </a>
+//                                         </span>
+//                                     </div>
+//                                 </div>
+//                                 <div className="checkout">
+//                                     <h5>Guaranteed Safe Checkout: </h5>
+//                                     <img src={logo} alt="logo" />
+//                                 </div>
+//                                 {/* </div> */}
+//                             </div>
+//                         </Col>
+//                         <Col lg="12" className="mt-4">
+//                             <div className='tabs'>
+//                                 <h6
+//                                     // className=` ${tab === 'desc' ? 'tab__active' : ''}`)}
+//                                     className='tab__active'
+//                                     // className={(nav) => cx('menu-item', { active: nav.isActive })}
+//                                     // className={` ${tab === 'desc' ? 'tab__active' : ''} `}
+//                                     onClick={() => setTab('desc')}
+//                                 >
+//                                     Description
+//                                 </h6>
+//                                 <h6
+//                                     // className=` ${tab === 'rev' ? 'tab__active' : ''}`)}
+//                                     onClick={() => setTab('rev')}
+//                                 >
+//                                     Review
+//                                 </h6>
+//                             </div>
+
+//                             {tab === 'desc' ? (
+//                                 <div className='tab__content'>
+//                                     <p>{desc}</p>
+//                                 </div>
+//                             ) : (
+//                                 <div className=' tab__form'>
+//                                     <div className='review'>
+//                                         <p className='user__name'>HIEUTHUHAI</p>
+//                                         <p className='user__email'>hieuthuhai222@gmail.com</p>
+//                                         <p className='feedback__text'>Great product</p>
+//                                     </div>
+//                                     <div className='review'>
+//                                         <p className='user__name'>HIEUTHUHAI</p>
+//                                         <p className='user__email'>hieuthuhai222@gmail.com</p>
+//                                         <p className='feedback__text'>Great product</p>
+//                                     </div>
+//                                     <div className='review'>
+//                                         <p className='user__name'>HIEUTHUHAI</p>
+//                                         <p className='user__email'>hieuthuhai222@gmail.com</p>
+//                                         <p className='feedback__text'>Great product</p>
+//                                     </div>
+
+//                                     <form className='form' onSubmit={submitHandler}>
+//                                         <div className='form__group'>
+//                                             <input
+//                                                 type="text"
+//                                                 placeholder="Enter your name"
+//                                                 required
+//                                                 onChange={(e) => setEnteredName(e.target.value)}
+//                                             />
+//                                         </div>
+//                                         <div className='form__group'>
+//                                             <input
+//                                                 type="text"
+//                                                 placeholder="Enter your email"
+//                                                 required
+//                                                 onChange={(e) => setEnteredEmail(e.target.value)}
+//                                             />
+//                                         </div>
+//                                         <div className='form__group'>
+//                                             <textarea
+//                                                 row={5}
+//                                                 type="text"
+//                                                 placeholder="Write your review"
+//                                                 required
+//                                                 onChange={(e) => setReviewMessaage(e.target.value)}
+//                                             />
+//                                         </div>
+//                                         <button type="submit" className="addToCart__btn">
+//                                             Submit
+//                                         </button>
+//                                     </form>
+//                                 </div>
+//                             )}
+//                         </Col>
+//                         <Col lg="12" className="mt-12">
+//                             <h3 className='related__product-title'>Related Products</h3>
+//                         </Col>
+//                         {relatedProduct.map((item) => (
+//                             <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
+//                                 <ProductCard item={item} />
+//                             </Col>
+//                         ))}
+//                     </Row>
+//                 </Container>
+//             </section>
+//         </Helmet>
+//     );
+// };
+
+// export default FoodDetails;

@@ -1,0 +1,102 @@
+.product__item {
+    /* width: 224px;
+    height: calc(width * 2); */
+    /* width: 274px; */
+    /* height: 440px; */
+    margin-top: 20px;
+    border: 1px solid #fde4e4;
+    padding: 30px;
+    cursor: pointer;
+}
+.product__img {
+    width: 274px;
+    height: 274px;
+    width: 100%;
+    transition: 0.4s;
+}
+.product__img img {
+    width: 100%;
+    height: 244px;
+    object-fit: contain;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+}
+.product__img:hover img {
+    transform: scale(1.2);
+}
+.product__title {
+    text-align: center;
+    color: var(--text-color);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-top: 24px;
+    height: 48px;
+}
+
+.product__title a:hover {
+    color: var(--text-color);
+}
+.product__price {
+    margin: 12px 0;
+}
+.product__priceSale {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.product__priceOriginal {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #d58f8f;
+    text-decoration: line-through;
+}
+.addToCart__btn {
+    border: none;
+    padding: 7px 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 54px;
+}
+@media only screen and (min-width: 1400px) {
+    .addToCart__btn {
+        margin-left: 61px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .addToCart__btn {
+        margin-left: 38px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .addToCart__btn {
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .product__item {
+        padding: 20px;
+    }
+    .product__title a {
+        font-size: 0.9rem;
+    }
+    .addToCart__btn {
+        padding: 5px 15px;
+        font-size: 0.8rem;
+        margin-left: 38px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .addToCart__btn {
+        margin-left: 53px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .addToCart__btn {
+        margin-left: 53px;
+    }
+}

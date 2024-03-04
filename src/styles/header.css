@@ -1,0 +1,225 @@
+.header {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+.nav__wrapper {
+    /* d-flex align-items-center justify-content-between */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: -92px;
+}
+
+.logo .logo-header {
+    width: calc(100% - 60%);
+    object-fit: contain;
+    fill: var(--primary-color);
+    margin-top: -10px;
+    margin-bottom: 0;
+}
+
+/* Menu */
+.menu {
+    /* d-flex align-items-center gap-5 */
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.menu a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-color);
+    /* color: #fff; */
+    transition: 0.3s;
+}
+.menu a:hover {
+    color: var(--primary-color);
+}
+.active__menu {
+    color: var(--primary-color) !important;
+}
+
+.cart__icon i,
+.profile i,
+.profile-img,
+.mobile__menu i {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.profile {
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.profile .profile__actions {
+    position: absolute;
+    top: calc(100% - 25px);
+    right: -58px;
+    width: 160px;
+    z-index: 10;
+    border-radius: 4px;
+    line-height: 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px #e0e0e0;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    animation: fadeIn ease-in 0.2s;
+    display: none;
+}
+/* .profile .profile__actions a + .profile .profile__actions a {
+    border-top: 1px solid #fde4e4;
+} */
+
+.profile:hover .profile__actions {
+    display: block;
+}
+
+.profile__actions::before {
+    content: '';
+    display: block;
+    border-width: 18px 22px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -29px;
+    right: 50px;
+    z-index: -1;
+}
+.profile__actions--seperate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.profile__actions a,
+.profile__actions span {
+    padding: 10px 16px;
+}
+.profile__actions a {
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+.profile__actions a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.profile__actions a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.profile__actions a:hover {
+    background-color: #fafafa;
+}
+
+.show__profileActions {
+    display: block;
+}
+.nav__right {
+    /* d-flex align-items-center gap-4 */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cart__icon {
+    position: relative;
+}
+.cart__badge {
+    cursor: pointer;
+    position: absolute;
+    top: 32px;
+    right: -7px;
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile__menu {
+    font-weight: 600;
+    display: none;
+}
+.header__shrink {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 99999;
+    box-shadow: 5px 5px 15px -5px #fde4e4;
+}
+/* Responsive */
+@media only screen and (max-width: 992px) {
+    .logo .logo-header {
+        width: calc(100% - 65%);
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.534);
+        z-index: 99;
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        line-height: 20px;
+    }
+    .menu a {
+        font-size: 0, 9rem;
+    }
+    .mobile__menu {
+        display: block;
+    }
+    .cart__icon i,
+    .profile i,
+    .profile-img,
+    .mobile__menu i {
+        font-size: 1.2rem;
+    }
+    .show__menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+    }
+    .cart__badge {
+        top: 24px;
+        right: -8px;
+    }
+}

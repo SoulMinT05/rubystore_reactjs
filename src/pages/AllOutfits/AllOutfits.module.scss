@@ -1,0 +1,116 @@
+.search__widget,
+.sorting__select,
+.filter__select {
+    padding: 7px 15px;
+    border: 1px solid #fde4e4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search__widget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.search__widget input {
+    width: 100%;
+    border: none;
+}
+.search__widget input:focus {
+    outline: none;
+}
+.sorting__widget {
+    text-align: right;
+}
+.sorting__select,
+.filter__select {
+    width: 54%;
+}
+.noSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+.noSearch h6 {
+    font-size: 1.3rem;
+}
+.noSearch img {
+    height: 64px;
+    width: 64px;
+    margin-left: 8px;
+}
+// Pagination
+.paginationBtns {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    list-style: none;
+    margin-top: 16px;
+}
+.paginationBtns a {
+    padding: 5px 13px;
+    background-color: var(--primary-color);
+    color: #fff !important;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+
+    &:hover {
+        background-color: var(--text-color);
+        transition: 0.3s;
+    }
+}
+.selected {
+    background-color: blue;
+}
+.selected a {
+    background-color: var(--primary-color);
+    color: green !important;
+}
+.all__outfits {
+    display: flex;
+
+    .outfit {
+        display: flex;
+        // width: 100% !important;
+    }
+}
+
+.active {
+    background-color: #1e50ff;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .search__widget {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .search__widget input {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .sorting__widget,
+    .filter__widget {
+        height: 44px;
+    }
+    .sorting__select {
+        width: 100%;
+        height: 100%;
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .search__widget {
+        margin-bottom: 20px;
+    }
+}
