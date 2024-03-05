@@ -18,12 +18,18 @@
     margin-left: -92px;
 }
 
-.logo .logo-header {
-    width: calc(100% - 60%);
+.logo .logo__header {
+    width: calc(100% - 50%);
     object-fit: contain;
     fill: var(--primary-color);
     margin-top: -10px;
     margin-bottom: 0;
+}
+.logo h5 {
+    color: #ff585f;
+    margin-left: -16px;
+    font-size: 1.2rem;
+    margin-top: -8px;
 }
 
 /* Menu */

@@ -97,6 +97,11 @@
 
 @media only screen and (max-width: 576px) {
     .addToCart__btn {
-        margin-left: 53px;
+        margin-left: 64px;
+    }
+}
+@media only screen and (max-width: 494px) {
+    .addToCart__btn {
+        margin-left: 44px;
     }
 }
